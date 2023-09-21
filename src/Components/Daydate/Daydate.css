@@ -1,0 +1,92 @@
+.calender {
+    width: 70%;
+    background-color: #f1f1f4;
+    border-radius: 20px;
+    height: 700px;
+    margin-left: 30px;
+}
+.day-list {
+    display: flex;
+   align-items: center;
+   margin:50px;
+   gap: 16px;
+   overflow-x: scroll;
+}
+.day-list::-webkit-scrollbar { 
+    width: 0;
+    height: 0;
+}
+.days {
+
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    align-items: center;
+    padding: 15px 15px;
+    font-size: 12px;
+    width: 100px;
+    align-self: center;
+}
+
+.day-name {
+    text-transform: uppercase;
+    color: #a9a9a9;
+}
+
+.days:hover > .day-name {
+    color: #15AD70;
+}
+.days:hover {
+    border-top-right-radius: 20px;
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+    color: #15AD70;
+    background-color: #dbd9d9;
+}
+
+.habit-card {
+    width: 90%;
+    height: 300px;
+    margin: 0 auto;
+    background-color: #eaeaea;
+    overflow:hidden;
+    display: flex;
+    padding: 40px;
+    justify-content: space-between;
+    border-radius: 30px;
+}
+.habit-board {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    
+}
+.heading-tertiary {
+    font-size: 24px;
+    font-weight: 400;
+}
+.btn-cta {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    width: 150px;
+    font-size: 14px;
+    padding: 14px 0;
+    background-color: #15AD70;
+    color: #f1f1f4;
+    outline: none;
+    border: none;
+    border-radius: 30px;
+}
+
+.calender-header {
+    margin:30px 50px 0 50px;
+    font-size: 30px;
+    font-weight: 400;
+    letter-spacing: 1px;
+}
+.board-img {
+    width: 300px;
+}

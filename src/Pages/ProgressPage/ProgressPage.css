@@ -1,0 +1,6 @@
+.progress-page {
+    display: flex;
+    flex-direction: row;
+    gap: 24px;
+    margin: 25px;
+}
