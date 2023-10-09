@@ -1,17 +1,4 @@
-.sigin-box {
-    display: flex;
-    flex-direction: column;
-    gap: 16px;
-    align-items: center;
-    height: 700px;
-    width: 500px;
-    margin: 25px;
-    border: 2px solid #333;
-    border-radius: 20px;
-    background-color: #1f1f20;
-    padding: 16px;
-    float: right;
-}
+
 .box-1 {
     display: flex;
     align-items: center;
@@ -19,9 +6,7 @@
     width: 470px;
     justify-content: space-between;
     padding: 0 16px;
- 
 }
-
 .box-header {
     color: #F1F1F4;
     font-weight: 100;
@@ -33,7 +18,7 @@
     width: 40px;
     border-radius: 50%;
     color: #F1F1F4;
-    background-color: #2b2b2b;
+    background-color: #313131;
     position: relative;
 }
 .icon-center {
@@ -60,8 +45,6 @@
     z-index: 1;
     overflow: hidden;
 }
-
-
 .polygon-1 {
     display: block;
     mask-image: linear-gradient(to bottom, #15ad70 ,#15ad70);
@@ -112,7 +95,7 @@
     z-index: 20;
 
 }
-.signin-text {
+.auth-text {
     position: relative;
     padding: 20px 0 0 20px ;
     z-index: 100;
@@ -126,15 +109,15 @@
 .text-2 {
     color: #1f1f20;
 }
-.signin-btn-1 {
+.auth-btn-1 {
     color: #1f1f20;
     background-color: #15ad70;
 }
-.signin-btn-2 {
+.auth-btn-2 {
     color: #f1f1f1;
     background-color: #1f1f20;
 }
-.signin-btn-pos {
+.auth-btn-pos {
     position: absolute;
     bottom: 10%;
     right: 5%;

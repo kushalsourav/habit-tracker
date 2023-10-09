@@ -1,0 +1,65 @@
+.texteditor {
+    height: 300px;
+    width: 500px;
+    border-radius: 20px;
+    background-color: #eaeaea;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 0;
+    padding: 20px;
+}
+.texteditor-header {
+  padding: 5px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.texteditor-header-button {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 18px;
+    padding: 10px 20px;
+    background-color: #ffffff;
+    border-radius: 20px;
+}
+.texteditor-header-text {
+font-size: 14px;
+}
+.texteditor-body-input {
+    width: 100%;
+    background: none;
+    padding: 20px;
+    height: 150px;
+    border: none;
+    outline: none;
+}
+.texteditor-footer {
+    display: flex;
+    width: 100%;
+    gap: 20px;
+}
+.texteditor-left {
+    width: 70%;
+    font-size: 14px;
+    border: none;
+    display: flex;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    justify-content: space-between;
+}
+.texteditor-right {
+    width: 25%;
+    display: flex;
+    justify-content: center;
+    border: none;
+    font-size: 14px;
+    background-color: #15AD70;
+    color: #f1f1f1;
+    border-radius: 25px;
+}

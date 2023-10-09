@@ -14,7 +14,6 @@
 }
 .sidebar-box {
     padding: 25px 5px 25px 25px;
-  
     width: 200px;
     height: 30px;
     font-size: 20px;
@@ -24,6 +23,7 @@
     justify-content: space-between;
     align-items: center;
     border-radius: 30px;
+    text-decoration: none;
 }
 .sidebar-info {
     display: flex;

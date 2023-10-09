@@ -26,7 +26,7 @@ return(
       <img src={bottle} alt="bottle" className='index bottle' />
       <div className='block-1'></div>
 
-      <button className='btn-getStarted'><Link to='/SignIn' className="link" >Get Started</Link></button>
+      <button className='btn-getStarted'><Link to='/Auth' className="link" >Get Started</Link></button>
       <div className="block-2"></div>
       </div>
     </div>

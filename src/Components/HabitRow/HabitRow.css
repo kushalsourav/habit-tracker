@@ -1,0 +1,30 @@
+.habit-container {
+    margin: 50px;
+    padding: 30px;
+}
+.habit-row {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 40px;
+    border-radius: 25px;
+    background-color: #eaeaea;
+    min-width: inherit;
+}
+.habit-row:not(:last-child) {
+    margin-bottom: 16px;
+}
+.habit-title {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+.habit-icon {
+    font-size: 24px;
+}
+.habit-name {
+    font-weight: bold;
+    font-size: 14px;
+    letter-spacing: 0.5px;
+}

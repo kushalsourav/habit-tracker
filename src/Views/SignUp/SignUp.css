@@ -1,0 +1,15 @@
+.signup-box {
+  display: flex;
+  gap: 5px;
+  font-size: 13px;
+}
+.signup-text {
+    color: #757575;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+}
+.signup-link {
+    color: #f1f1f4;
+    font-weight: 700;
+    text-decoration: none;
+}
