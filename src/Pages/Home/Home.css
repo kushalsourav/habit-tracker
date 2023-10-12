@@ -9,6 +9,7 @@
 
 .home-header {
     font-size: 9rem;
+    opacity: 0;
 }
 
 .home-footer {
@@ -60,11 +61,12 @@
 }
 .bottle {
     position: absolute;
-    top: 8.1%;
+    top: 0;
     right: 45%;
     width: 100px;
     height: auto;
     z-index: 3;
+    opacity: 0;
 }
 .mug {
     position: absolute;
@@ -80,6 +82,7 @@
     right: 10%;
     width: 120px;
     z-index: 3;
+    opacity: 0;
     transform: scaleX(-1);
 }
 .block-1 {

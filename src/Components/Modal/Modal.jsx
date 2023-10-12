@@ -9,7 +9,6 @@ const Modal = ({children, openModal, setCloseModal, setData}) => {
             <ReactModal  
                isOpen={openModal}
                className={"modal"}
-               
             >
                 {children}
                 <span className='modal-close' onClick={() => {setCloseModal()

@@ -10,9 +10,10 @@ const Habit = () => {
     const {data, setData} = useData()
     const {authState} = useAuth()
     const [openModal, setCloseModal] = useClose()
-    const month = new Date().getMonth()
+    const month = new Date().getMonth() 
+    console.log(month)
     const year = new Date().getFullYear()
-    function getDaysInMonth(month, year) {
+    const getDaysInMonth = (month, year) => {
         const date = new Date(year, month, 1);
         let days = [];
         while (date.getMonth() === month) {

@@ -5,20 +5,19 @@ import { faTrash, faPencil, faPlus } from "@fortawesome/free-solid-svg-icons";
 import * as Icons from "@fortawesome/free-solid-svg-icons";
 import { deleteHabits } from "../../apis/apis";
 import eyes from "../../Assets/img/game.png"
-import { useEffect } from "react";
 
 const HabitRow = ({ habits, setData, setCloseModal, dateAdded , currDate}) => {
     const token = localStorage.getItem("token")
     let filterbyDate = habits.filter((habit) => habit.dateAdded === dateAdded)
-    console.log(filterbyDate)
     let currDay = currDate.split('/')[1]
     let selDay = dateAdded.split('/')[1]
     let result = selDay - currDay
-    console.log(selDay - currDay)
     return (
         <div className="habit-container">
+            { filterbyDate.length === 0 && result <= 0 && <h3>
+                   no data
+                </h3>}
             {
-
                 filterbyDate.length === 0  && result >= 0?
 
                     <div className="habit-card">

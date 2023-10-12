@@ -6,9 +6,12 @@ const Auth = () => {
 
 
     return(
+        <>
         <AuthBox>
            <AuthType />
         </AuthBox>
+        </>
+
     )
 }
 
