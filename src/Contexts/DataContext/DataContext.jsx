@@ -21,7 +21,8 @@ const initialDataState = {
     editId: "",
     edit: false
   },
-  dateAdded: ""
+  dateAdded: "",
+  currentDate:""
 }
 
 
@@ -43,6 +44,7 @@ const DataProvider = ({children}) => {
     
       let dateString = `${String(month + 1).padStart(2,'0')}/${String(new Date(date).getDate()).padStart(2,'0')}/${year}`
       setData({type:"DATE_ADDED", dateAdded:dateString})
+      setData({type:"CURR_DATE", currDate:dateString})
       setData({type:"HABITS" ,dateCreate:dateString, name:data.habit.name, iconName:data.habit.icon ,color:data.habit.colorCode})
     },[token, setData])
       return(

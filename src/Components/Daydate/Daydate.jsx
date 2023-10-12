@@ -1,11 +1,8 @@
-import { FontAwesomeIcon,  } from '@fortawesome/react-fontawesome';
-import { faPlus } from '@fortawesome/free-solid-svg-icons';
-import eyes from '../../Assets/img/game.png';
 import './Daydate.css'
 import HabitRow from '../HabitRow/HabitRow';
 import TextEditor from '../TextEditor/TextEditor';
-import { useEffect, useState } from 'react';
-const Daydate = ({dates, colors, icons, habits,openModal, setCloseModal, setData, habit, isEdit, dateAdded, username}) => {
+import {  useState } from 'react';
+const Daydate = ({dates, colors, icons, habits,openModal, setCloseModal, setData, habit, isEdit, dateAdded, username, currDate}) => {
    const [state, setState] = useState(dateAdded.split('/')[1])
    console.log(state,dateAdded)
 
@@ -33,7 +30,7 @@ const Daydate = ({dates, colors, icons, habits,openModal, setCloseModal, setData
                })
             }
             </div>
-           <HabitRow habits={habits} setData={setData} setCloseModal={setCloseModal} dateAdded={dateAdded} />
+           <HabitRow habits={habits} setData={setData} setCloseModal={setCloseModal} dateAdded={dateAdded} currDate={currDate} />
            <TextEditor colors={colors} icons={icons}  setCloseModal={setCloseModal} 
            openModal={openModal} setData={setData} habit={habit} isEdit={isEdit} />
         </div>

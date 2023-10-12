@@ -12,3 +12,20 @@
     padding: 16px;
     float: right;
 }
+@media (max-width:320px) {
+    body {
+        height: 100%;
+    }
+    .auth-box {
+        float: none;
+        margin: 20px auto;
+        height: 100vh;
+    }
+}
+@media (max-width:768px) {
+    .auth-box {
+        float: none;
+        margin: 20px auto;
+        max-height: max-content;
+    }
+}

@@ -10,6 +10,8 @@ const DataReducer = (state, action) => {
             return {...state, isEdit: {...state.isEdit, editId : action.editId, edit:action.edit}}
         case "DATE_ADDED":
              return {...state, dateAdded : action.dateAdded}
+        case "CURR_DATE":
+            return {...state, currentDate:action.currDate}
         default :
             return state;
     }

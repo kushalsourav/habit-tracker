@@ -30,7 +30,7 @@ const Habit = () => {
     return (
         <div className="habit">
             <Sidebar setCloseModal={setCloseModal} setData={setData} />
-            <Daydate dates={result} colors={data.colors} icons={data.habitIcons} habits={data.habits} openModal={openModal} setCloseModal={setCloseModal} month={month} setData={setData} habit={data.habit} isEdit={data.isEdit} dateAdded={data.dateAdded} username={authState.username} />
+            <Daydate dates={result} colors={data.colors} icons={data.habitIcons} habits={data.habits} openModal={openModal} setCloseModal={setCloseModal} month={month} setData={setData} habit={data.habit} isEdit={data.isEdit} dateAdded={data.dateAdded} username={authState.username} currDate={data.currentDate} />
         </div>
     );
 };
