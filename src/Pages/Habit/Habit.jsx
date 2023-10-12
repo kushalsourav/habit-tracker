@@ -1,5 +1,6 @@
 import Daydate from "../../Components/Daydate/Daydate";
 import Sidebar from "../../Components/Sidebar/Sidebar";
+import { useAuth } from "../../Contexts/AuthContext/AuthContext";
 import { useData } from "../../Contexts/DataContext/DataContext";
 import useClose from "../../Hooks/useClose";
 import './Habit.css';
@@ -7,14 +8,13 @@ import './Habit.css';
 
 const Habit = () => {
     const {data, setData} = useData()
+    const {authState} = useAuth()
     const [openModal, setCloseModal] = useClose()
     const month = new Date().getMonth()
     const year = new Date().getFullYear()
     function getDaysInMonth(month, year) {
         const date = new Date(year, month, 1);
         let days = [];
-    
-     
         while (date.getMonth() === month) {
           days.push({ 
                    day : new Date(date).getDate(), 
@@ -30,7 +30,7 @@ const Habit = () => {
     return (
         <div className="habit">
             <Sidebar setCloseModal={setCloseModal} setData={setData} />
-            <Daydate dates={result} colors={data.colors} icons={data.habitIcons} habits={data.habits} openModal={openModal} setCloseModal={setCloseModal} month={month} setData={setData} habit={data.habit} isEdit={data.isEdit} dateAdded={data.dateAdded}/>
+            <Daydate dates={result} colors={data.colors} icons={data.habitIcons} habits={data.habits} openModal={openModal} setCloseModal={setCloseModal} month={month} setData={setData} habit={data.habit} isEdit={data.isEdit} dateAdded={data.dateAdded} username={authState.username} />
         </div>
     );
 };

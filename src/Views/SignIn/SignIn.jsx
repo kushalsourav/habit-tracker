@@ -16,7 +16,9 @@ const token  = localStorage.getItem("token")
         e.preventDefault()
         const result = await axios.post('http://localhost:8000/user/login', {email: authState.email, username: authState.username, password: authState.password}).then((res) => res)
         if(result.data.success === true) {
+
             console.log(result.data.user)
+            authDispatch({type:"SET_USER", username:result.data.user.username})
             localStorage.setItem("token",result.data.token);
             authDispatch({type:"LOGIN", login:true});
             // Use navigate to go to the new route

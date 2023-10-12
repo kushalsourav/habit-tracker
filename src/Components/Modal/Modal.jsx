@@ -13,7 +13,7 @@ const Modal = ({children, openModal, setCloseModal, setData}) => {
             >
                 {children}
                 <span className='modal-close' onClick={() => {setCloseModal()
-                setData({type:"HABITS" ,dateCreate:"", name:"", iconName:"" ,color:""})
+                setData({type:"HABITS" ,dateCreate:"", name:"", iconName:"faGripVertical" ,color:"#FFC700"})
                 }}>
                  <FontAwesomeIcon icon={faXmark} />
                 </span>

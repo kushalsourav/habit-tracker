@@ -54,7 +54,6 @@
     position: absolute;
     top: 30%;
     right: 10%;
-    width: 60px;
     height: auto;
     z-index: 3;
     transform: rotate(-40deg);
@@ -118,7 +117,113 @@
     text-decoration: none;
     color: inherit;
 }
-  
+@media (max-width: 768px) {
+    .home-header {
+        font-size: 7rem;
+    }
+    .block-1 {
+        width: 250px;
+        height: 150px;
+    }
+    .block-2 {
+        width: 300px;
+        height: 200px;
+    }
+    .btn-getStarted {
+        padding: 10px 45px;
+        font-size: 14px;
+    }
+    .basket-ball {
+        width: 100px;
+        top: 20px;
+        left: 40px;
+    }
+    .book {
+        width: 100px;
+        top: 15px;
+        left: 140px;
+        transform: rotate(-25deg);
+    }
+    .alarm {
+        width: 70px;
+      
+        top: -20px;
+        left: 100px;
+        transform: rotate(20deg);
+    }
+    .mug{
+        width: 50px;
+    }
+    .apple {
+        width: 40px;
+        right: 20%;
+    }
+    .vase {
+        width: 120px;
+        top: -20%;
+        right: 25%;
+    }
+    .sneakers {
+        width: 80px;
+        right: 15%;
+    }
+    .bottle {
+        width: 70px;
+        top: 6%;
+    }
+}
+@media (max-width: 435px) {
+    body {
+        width: 435px;
+        overflow: hidden;
+    }
+    .home-header {
+        font-size: 4rem;
+    }
+    .home-footer {
+        position: absolute;
+        bottom:0;
+        width: inherit;
+        margin-right: 5px;
+    }
+    .index {
+        display: none;
+    }
+    .block-1, .block-2 {
+        display: none;
+    }
+    .index + .vase {
+        display: block;
+        width: 150px;
+        top: 52%;
+        left: 20%;
+    }
+    .index + .apple {
+        display: block;
+        width: 60px;
+        top: 74%;
+        left: 60%;
+        transform: rotate(0deg);
+    }
+    .btn-getStarted {
+        padding: 15px 70px;
+align-self: flex-end;
+margin: 0 auto;
+    }
+}
 
+@media (max-width: 320px) {
+    .home-footer {
+        position: absolute;
+
+        bottom:0;
+        width: inherit;
+        margin-right: 5px;
+    }
+    .btn-getStarted {
+        align-self: flex-end;
+        margin: 0 auto;
+            }
+}
 
   

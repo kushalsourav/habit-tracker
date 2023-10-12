@@ -5,13 +5,13 @@ import './Daydate.css'
 import HabitRow from '../HabitRow/HabitRow';
 import TextEditor from '../TextEditor/TextEditor';
 import { useEffect, useState } from 'react';
-const Daydate = ({dates, colors, icons, habits,openModal, setCloseModal, setData, habit, isEdit, dateAdded}) => {
+const Daydate = ({dates, colors, icons, habits,openModal, setCloseModal, setData, habit, isEdit, dateAdded, username}) => {
    const [state, setState] = useState(dateAdded.split('/')[1])
    console.log(state,dateAdded)
 
     return (
         <div className="calender">
-            <h2 className='calender-header'>Hello, AshBorn 😊</h2>
+            <h2 className='calender-header'>Hello, {username} 😊</h2>
             <span className='calender-month'>{dates[0].month}</span>
             <div className="day-list">
             {

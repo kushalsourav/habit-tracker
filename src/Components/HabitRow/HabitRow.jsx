@@ -20,7 +20,10 @@ const HabitRow = ({ habits, setData, setCloseModal, dateAdded }) => {
                     <div className="habit-card">
                         <div className="habit-board">
                             <h3 className='heading-tertiary'>Add your first goal</h3>
-                            <button className='btn-cta' onClick={() => setCloseModal()} >
+                            <button className='btn-cta' onClick={() => {setCloseModal()
+                            
+                            
+                            }} >
                                 <FontAwesomeIcon icon={faPlus} />
                                 New Goal</button>
                         </div>

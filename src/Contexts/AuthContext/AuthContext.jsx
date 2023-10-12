@@ -3,6 +3,9 @@ import AuthReducer from "../../Reducers/AuthReducer/AuthReducer";
 import { redirect, useNavigate , Navigate, useLocation} from "react-router-dom";
 
 const initialAuthState = {
+  user : {
+
+  },
     username: "",
     email: "",
     password: "",
