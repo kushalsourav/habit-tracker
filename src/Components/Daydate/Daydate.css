@@ -47,6 +47,28 @@
 .days:hover > .day-name {
     color: #15AD70;
 }
+.days {
+    border: none;
+}
+.days-focus > .day-name {
+    color: #15AD70;
+}
+.days-focus {
+    border-top-right-radius: 20px;
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+    color: #15AD70;
+    background-color: #dbd9d9; 
+}
+.days:focus{
+    border-top-right-radius: 20px;
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+    color: #15AD70;
+    background-color: #dbd9d9; 
+}
 .days:hover {
     border-top-right-radius: 20px;
     border-top-left-radius: 20px;

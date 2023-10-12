@@ -1,6 +1,7 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import "./TextEditor.css"
 import { faCircle, faGripVertical, faRepeat } from "@fortawesome/free-solid-svg-icons";
+import  * as Icons from "@fortawesome/free-solid-svg-icons";
 import Colorbox from "../ColorBox/Colorbox";
 import IconBox from "../IconBox/IconBox";
 import useClose from "../../Hooks/useClose";
@@ -21,11 +22,11 @@ const TextEditor = ({ colors, icons, openModal, setCloseModal, setData , habit, 
       <div className="texteditor">
         <div className="texteditor-header">
           <span className="texteditor-header-button" onClick={() => setCloseIcon()} >
-            <FontAwesomeIcon icon={faGripVertical} style={{ color: "#FFC700" }} />
+            <FontAwesomeIcon icon={Icons[habit.icon]} style={{ color: habit.colorCode }} />
             <span className="texteditor-header-text">icon</span>
           </span>
           <span className="texteditor-header-button" onClick={() => setCloseColor()}>
-            <FontAwesomeIcon icon={faCircle} style={{ color: "#FFC700" }} />
+            <FontAwesomeIcon icon={faCircle} style={{ color: habit.colorCode }} />
             <span className="texteditor-header-text">color</span>
           </span>
         </div>
@@ -48,8 +49,8 @@ const TextEditor = ({ colors, icons, openModal, setCloseModal, setData , habit, 
               setCloseModal()
           }} >save</button>
         </div>
-        <IconBox icons={icons} toggle={setCloseIcon} close={closeIcon} setData={setData} habit={habit} />
-        <Colorbox colors={colors} toggle={setCloseColor} close={closeColor} setData={setData} habit={habit} />
+        <IconBox icons={icons} toggle={setCloseIcon} close={closeIcon} setData={setData} habit={habit} setCloseModal={setCloseIcon} />
+        <Colorbox colors={colors} toggle={setCloseColor} close={closeColor} setData={setData} habit={habit} setCloseModal={setCloseColor} />
       </div>
     </Modal>
 

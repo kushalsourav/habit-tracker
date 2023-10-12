@@ -3,7 +3,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faXmark } from "@fortawesome/free-solid-svg-icons";
 import  * as Icons from "@fortawesome/free-solid-svg-icons";
 
-const IconBox = ({icons, toggle, close, habit, setData}) => {
+const IconBox = ({icons, toggle, close, habit, setData, setCloseModal}) => {
     return (
         <div className="icons-box" style={close ? {"display": "block" } : {"display" : "none"}}>
             <span className="icon-box-close" onClick={() => toggle()}>
@@ -13,7 +13,9 @@ const IconBox = ({icons, toggle, close, habit, setData}) => {
                 {icons.map((icon) => {
                     return (
                         <span className="icon-code" onClick={() => {
-                            setData({type:"HABITS" ,dateCreate:habit.dateAdded, name:habit.name, iconName:icon ,color:habit.colorCode})}}>
+                            setData({type:"HABITS" ,dateCreate:habit.dateAdded, name:habit.name, iconName:icon ,color:habit.colorCode})
+                            setCloseModal()
+                            }}>
                             <FontAwesomeIcon icon={Icons[icon]} style={{color:"#15AD70"}} />
                         </span>
                     )

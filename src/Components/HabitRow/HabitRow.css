@@ -28,3 +28,11 @@
     font-size: 14px;
     letter-spacing: 0.5px;
 }
+.habit-kebab {
+    font-size: 18px;
+    background-color: none;
+    outline: none;
+    border: none;
+    background: transparent;
+    margin-left: 26px;
+}

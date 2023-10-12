@@ -14,8 +14,8 @@ const initialDataState = {
   habit : {
     name: "",
     dateAdded: "",
-    icon: "",
-    colorCode: "",
+    icon: "faGripVertical",
+    colorCode: "#FFC700",
   },
   isEdit : {
     editId: "",
@@ -33,16 +33,17 @@ const DataProvider = ({children}) => {
     const token = localStorage.getItem("token");
     const [data, setData] = useReducer(DataReducer, initialDataState)
 
-    const doPostOrUpdateHabit = (edit, ) => {
-         if(!edit) {
-             // post
-         } else {
-          //update id, habit
-         }
-    }
+  
 
     useEffect(() => {
       getHabits(token, setData);
+      const date = new Date()
+      const month = date.getMonth()
+      const year = date.getFullYear()
+    
+      let dateString = `${String(month + 1).padStart(2,'0')}/${String(new Date(date).getDate()).padStart(2,'0')}/${year}`
+      setData({type:"DATE_ADDED", dateAdded:dateString})
+      setData({type:"HABITS" ,dateCreate:dateString, name:data.habit.name, iconName:data.habit.icon ,color:data.habit.colorCode})
     },[token, setData])
       return(
         <DataContext.Provider value={{data, setData}} >

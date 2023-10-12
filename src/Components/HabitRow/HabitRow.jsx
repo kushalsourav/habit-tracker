@@ -40,7 +40,8 @@ const HabitRow = ({ habits, setData, setCloseModal, dateAdded }) => {
                                     </span>
                                     <p className="habit-name">{habit.name}</p>
                                 </div>
-                                <span className="habit-kebab" onClick={() => {
+                                <div>
+                                <button className="habit-kebab" onClick={() => {
                                     setCloseModal()
                                     setData({ type: "HABITS", dateCreate: habit.dateAdded, name: habit.name, iconName: habit.icon, color: habit.colorCode })
                                     setData({ type: "EDIT", edit: true, editId: habit._id })
@@ -48,10 +49,12 @@ const HabitRow = ({ habits, setData, setCloseModal, dateAdded }) => {
 
                                 }>
                                     <FontAwesomeIcon icon={faPencil} style={{ color: habit.colorCode }} />
-                                </span>
-                                <span className="habit-kebab" onClick={() => { deleteHabits(habit._id, token, setData) }}>
+                                </button>
+                                <button className="habit-kebab" onClick={() => { deleteHabits(habit._id, token, setData) }}>
                                     <FontAwesomeIcon icon={faTrash} style={{ color: habit.colorCode }} />
-                                </span>
+                                </button>    
+                                 </div>
+
                             </div>
                         )
                     })

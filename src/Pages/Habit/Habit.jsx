@@ -26,8 +26,7 @@ const Habit = () => {
         }
         return days;
     }
-    const result = getDaysInMonth(month, year) 
-    console.log(data.isEdit)         
+    const result = getDaysInMonth(month, year)       
     return (
         <div className="habit">
             <Sidebar setCloseModal={setCloseModal} setData={setData} />
