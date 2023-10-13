@@ -1,14 +1,14 @@
 .icons-box {
-    width: 40%;
-    height: 250px;
-    padding: 15px;
-    position: relative;
-    position: absolute;
-    top: 50%;
-    left: 5%;
-    transform: translate(0%, -50%);
+  width: 40%;
+  height: 250px;
+  padding: 15px;
+  position: relative;
+  position: absolute;
+  top: 50%;
+  left: 5%;
+  transform: translate(0%, -50%);
 }
-.icon-boxes::-webkit-scrollbar { 
+.icon-boxes::-webkit-scrollbar {
   width: 0;
   height: 0;
 }
@@ -27,7 +27,7 @@
 }
 .icon-box-close {
   height: 40px;
-  width:40px;
+  width: 40px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -37,16 +37,15 @@
 
   border-radius: 50%;
   background-color: #ffffff;
-
 }
 .icon-code {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 60px;
-    height: 60px;
-    margin:auto auto;
-    background-color: #eaeaea;
-    font-size: 22px;
-    border-radius: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 60px;
+  height: 60px;
+  margin: auto auto;
+  background-color: #eaeaea;
+  font-size: 22px;
+  border-radius: 15px;
 }

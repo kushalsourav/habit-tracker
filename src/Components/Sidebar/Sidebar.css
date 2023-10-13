@@ -1,78 +1,77 @@
 .sidebar {
-    width: 25%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 10px;
-    
+  width: 25%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
 }
 .sidebar-head {
-    color: #f1f1f4;
-    font-weight: 100;
-    letter-spacing: 1px;
-    margin: 20px 60px 20px 0;
+  color: #f1f1f4;
+  font-weight: 100;
+  letter-spacing: 1px;
+  margin: 20px 60px 20px 0;
 }
 .sidebar-box {
-    padding: 25px 5px 25px 25px;
-    width: 200px;
-    height: 30px;
-    font-size: 20px;
-    font-weight: 100;
-    color: #575759;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    border-radius: 30px;
-    text-decoration: none;
+  padding: 25px 5px 25px 25px;
+  width: 200px;
+  height: 30px;
+  font-size: 20px;
+  font-weight: 100;
+  color: #575759;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-radius: 30px;
+  text-decoration: none;
 }
 .sidebar-info {
-    display: flex;
-    gap: 16px;
+  display: flex;
+  gap: 16px;
 }
 .sidebar-title {
-    font-size: 14px;
-    margin-top: 2px;
-    margin-right: 20px;
+  font-size: 14px;
+  margin-top: 2px;
+  margin-right: 20px;
 }
 .sidebar-icon {
-    font-size: 12px;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%,-50%);
+  font-size: 12px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 .sidebar-add {
-    height: 40px;
-    width: 40px;
-    border-radius: 50%;
-    background-color: #f1f1f4;
-    color: #15AD70;
-    position: relative;
-    display: none;
+  height: 40px;
+  width: 40px;
+  border-radius: 50%;
+  background-color: #f1f1f4;
+  color: #15ad70;
+  position: relative;
+  display: none;
 }
 
 .sidebar-box:hover {
-    background-color: #15AD70;
-    color: #f1f1f4;
+  background-color: #15ad70;
+  color: #f1f1f4;
 }
 .sidebar-box:hover > .sidebar-add {
-    display: block;
+  display: block;
 }
 
-@media (max-width:435px) {
-    .sidebar {
-        width: 100%;
-        display: flex;
-        flex-direction: row;
-        justify-content: center;
-    }
-    .sidebar-head {
-        display: none;
-    }
-    .sidebar-title{
-        display: none;
-    }
-    .sidebar-box {
-        width: 100px;
-    }
+@media (max-width: 435px) {
+  .sidebar {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+  }
+  .sidebar-head {
+    display: none;
+  }
+  .sidebar-title {
+    display: none;
+  }
+  .sidebar-box {
+    width: 100px;
+  }
 }

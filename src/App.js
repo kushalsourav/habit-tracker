@@ -1,4 +1,3 @@
-
 import Toast from "./Components/Toast/Toast";
 import ContextProvider from "./Contexts/ContextProvider";
 import { useData } from "./Contexts/DataContext/DataContext";
@@ -8,10 +7,8 @@ function App() {
   return (
     <div>
       <ContextProvider>
-      <Router />
-     
+        <Router />
       </ContextProvider>
-
     </div>
   );
 }

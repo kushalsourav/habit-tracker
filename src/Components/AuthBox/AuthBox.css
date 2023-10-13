@@ -1,31 +1,31 @@
 .auth-box {
-    display: flex;
-    flex-direction: column;
-    gap: 16px;
-    align-items: center;
-    height: 700px;
-    width: 500px;
-    margin: 25px;
-    border: 2px solid #333;
-    border-radius: 20px;
-    background-color: #1f1f20;
-    padding: 16px;
-    float: right;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  align-items: center;
+  height: 700px;
+  width: 500px;
+  margin: 25px;
+  border: 2px solid #333;
+  border-radius: 20px;
+  background-color: #1f1f20;
+  padding: 16px;
+  float: right;
 }
-@media (max-width:320px) {
-    body {
-        height: 100%;
-    }
-    .auth-box {
-        float: none;
-        margin: 20px auto;
-        height: 100vh;
-    }
+@media (max-width: 320px) {
+  body {
+    height: 100%;
+  }
+  .auth-box {
+    float: none;
+    margin: 20px auto;
+    height: 100vh;
+  }
 }
-@media (max-width:768px) {
-    .auth-box {
-        float: none;
-        margin: 20px auto;
-        max-height: max-content;
-    }
+@media (max-width: 768px) {
+  .auth-box {
+    float: none;
+    margin: 20px auto;
+    max-height: max-content;
+  }
 }

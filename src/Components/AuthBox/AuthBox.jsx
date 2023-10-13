@@ -1,11 +1,7 @@
-import './AuthBox.css'
+import "./AuthBox.css";
 
-const AuthBox = ({children}) => {
-    return (
-        <div className="auth-box">
-            {children}
-        </div>
-    );
-}
+const AuthBox = ({ children }) => {
+  return <div className="auth-box">{children}</div>;
+};
 
 export default AuthBox;

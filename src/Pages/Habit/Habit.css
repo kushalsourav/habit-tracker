@@ -1,17 +1,17 @@
 .habit {
-    display: flex;
-    flex-direction: row;
-    gap: 24px;
-    margin: 25px;
-    position: relative;
+  display: flex;
+  flex-direction: row;
+  gap: 24px;
+  margin: 25px;
+  position: relative;
 }
 
-@media (max-width:435px) {
-    .habit{
-        width: 100%;
-        margin: 0 20px;
-        display: flex;
-        flex-direction: column-reverse;
-        align-items: center;
-    }
+@media (max-width: 435px) {
+  .habit {
+    width: 100%;
+    margin: 0 20px;
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: center;
+  }
 }

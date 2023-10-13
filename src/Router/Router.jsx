@@ -10,22 +10,35 @@ import { useAuth } from "../Contexts/AuthContext/AuthContext";
 import Toast from "../Components/Toast/Toast";
 import { useData } from "../Contexts/DataContext/DataContext";
 const Router = () => {
-const {authState} = useAuth();
-const {data} = useData()
-    return(
-        <>
-        <Routes>
-         <Route path="/" element={<Home />} />
-         <Route path="/Auth" element={<Auth />} />
-         <Route path="/Habit" element={<RequireAuth><Habit /></RequireAuth> } />
-         <Route path="/Progress" element={<RequireAuth><ProgressPage /></RequireAuth>} />
-         <Route path="/Auth/Signin" element={<SignIn />} />
-         <Route path="/Auth/Signup" element={<SignUp />} />
-        </Routes>
-        <Toast type={data.toast.toastType} message={data.toast.toastMessage} />
-        </>
-    )
-
+  const { authState } = useAuth();
+  const { data } = useData();
+  return (
+    <>
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/Auth" element={<Auth />} />
+        <Route
+          path="/Habit"
+          element={
+            <RequireAuth>
+              <Habit />
+            </RequireAuth>
+          }
+        />
+        <Route
+          path="/Progress"
+          element={
+            <RequireAuth>
+              <ProgressPage />
+            </RequireAuth>
+          }
+        />
+        <Route path="/Auth/Signin" element={<SignIn />} />
+        <Route path="/Auth/Signup" element={<SignUp />} />
+      </Routes>
+      <Toast type={data.toast.toastType} message={data.toast.toastMessage} />
+    </>
+  );
 };
 
 export default Router;
