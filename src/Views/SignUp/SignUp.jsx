@@ -6,19 +6,30 @@ import AuthBox from "../../Components/AuthBox/AuthBox";
 import { Link, useNavigate } from 'react-router-dom';
 import "./SignUp.css"
 import axios from "axios";
+import useToast from "../../Hooks/useToast";
 
 const SignUp = () => {
 const {authState, authDispatch} = useAuth()
-console.log(authState)
+const postToast = useToast()
 const navigate = useNavigate()
 const signupHandler = async (e) => {
     e.preventDefault();
 
    const result = await axios.post('http://localhost:8000/user/signup', {email: authState.email, username: authState.username, password: authState.password}).then((res) => res)
-   if(result.status === 200) {
-         navigate("/Auth/Signin")
+          
+   if(authState.email === " ") {
+    postToast("warning", result.data.error)
+}
+if(result.data.success === false) {
+    postToast("warning", result.data.message)
+} else {
+    postToast("success", "login please")
+    navigate("/Auth/Signin")
+}
+
+         
         console.log("true")
-   }
+   
 }
 
     return(

@@ -22,7 +22,11 @@ const initialDataState = {
     edit: false
   },
   dateAdded: "",
-  currentDate:""
+  currentDate:"",
+  toast: {
+    toastType: '',
+    toastMessage: ''
+},
 }
 
 

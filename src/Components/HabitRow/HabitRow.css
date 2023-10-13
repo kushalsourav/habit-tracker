@@ -1,6 +1,12 @@
 .habit-container {
     margin: 50px;
     padding: 30px;
+    height: 400px;
+    overflow-y: scroll;
+}
+.habit-container::-webkit-scrollbar { 
+    width: 0;
+    height: 0;
 }
 .habit-row {
     display: flex;
@@ -35,4 +41,21 @@
     border: none;
     background: transparent;
     margin-left: 26px;
+}
+
+@media (max-width: 435px) {
+    .habit-container {
+        margin: 10px;
+        padding: 10px;
+        height: 280px;
+    }
+}
+@media (max-width:375px) {
+
+    .habit-container {
+        margin: 50px 20px 20px 20px;
+        padding: 10px;
+        height: 400px;
+    }
+    
 }

@@ -7,8 +7,11 @@ import SignIn from "../Views/SignIn/SignIn";
 import SignUp from "../Views/SignUp/SignUp";
 import RequireAuth from "../Contexts/AuthContext/RequireAuth/RequireAuth";
 import { useAuth } from "../Contexts/AuthContext/AuthContext";
+import Toast from "../Components/Toast/Toast";
+import { useData } from "../Contexts/DataContext/DataContext";
 const Router = () => {
 const {authState} = useAuth();
+const {data} = useData()
     return(
         <>
         <Routes>
@@ -19,6 +22,7 @@ const {authState} = useAuth();
          <Route path="/Auth/Signin" element={<SignIn />} />
          <Route path="/Auth/Signup" element={<SignUp />} />
         </Routes>
+        <Toast type={data.toast.toastType} message={data.toast.toastMessage} />
         </>
     )
 

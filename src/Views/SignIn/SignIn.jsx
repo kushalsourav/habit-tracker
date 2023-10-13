@@ -6,21 +6,25 @@ import { Link, useNavigate, his, useLocation } from 'react-router-dom';
 import { useAuth } from '../../Contexts/AuthContext/AuthContext';
 import axios from 'axios';
 import { useEffect } from 'react';
+import useToast from '../../Hooks/useToast';
 
 const SignIn = () => {
 const {authState ,authDispatch} = useAuth();
 const location = useLocation()
 const navigate = useNavigate()
 const token  = localStorage.getItem("token")
+const postToast = useToast()
     const SigninHandler =  async (e) => {
         e.preventDefault()
         const result = await axios.post('http://localhost:8000/user/login', {email: authState.email, username: authState.username, password: authState.password}).then((res) => res)
+        if(result.data.success === false) {
+            postToast("warning", result.data.error)
+        }
         if(result.data.success === true) {
-
-            console.log(result.data.user)
             authDispatch({type:"SET_USER", username:result.data.user.username})
             localStorage.setItem("token",result.data.token);
             authDispatch({type:"LOGIN", login:true});
+            authDispatch({type:"INPUT", email:"", password:"", username:""})
             // Use navigate to go to the new route
             navigate('/Habit');
         }

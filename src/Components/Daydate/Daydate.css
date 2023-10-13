@@ -123,3 +123,38 @@
 .board-img {
     width: 300px;
 }
+
+
+@media (max-width:435px) {
+
+    .calender {
+        width: 100%;
+
+        height: 500px;
+        margin-top: 30px;
+        margin-left: 0;
+        margin-right:20px;
+    }
+    .calender-month {
+        display: none;
+    }
+    .day-list {
+        margin: 10px;
+    }
+    .days {
+        width: 80px;
+    }
+}
+@media (max-width:375px) {
+
+    .calender {
+        width: 100%;
+        background-color: #f1f1f4;
+        border-radius: 20px;
+        height: 700px;
+        margin-top: 30px;
+        margin-left: 0;
+        margin-right:20px;
+        position: relative;
+    }
+}

@@ -12,6 +12,8 @@ const DataReducer = (state, action) => {
              return {...state, dateAdded : action.dateAdded}
         case "CURR_DATE":
             return {...state, currentDate:action.currDate}
+        case "TOAST":
+            return {...state, toast: {...state.toast , toastType: action.toastType, toastMessage:action.toastMessage}};
         default :
             return state;
     }

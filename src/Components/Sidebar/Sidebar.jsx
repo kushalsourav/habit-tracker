@@ -1,10 +1,14 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faHome, faChartSimple,faGear, faPlus } from "@fortawesome/free-solid-svg-icons";
 import "./Sidebar.css"
-import { Link, useLocation } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
+import { useAuth } from "../../Contexts/AuthContext/AuthContext";
 
 const Sidebar = ({setCloseModal}) => {
+    const navigate = useNavigate()
     const location = useLocation()
+    const {authState, authDispatch} = useAuth()
+    console.log(authState)
     return (
         <div className="sidebar">
             <h3 className="sidebar-head">Be Better</h3>
@@ -32,6 +36,15 @@ const Sidebar = ({setCloseModal}) => {
                 <span className="sidebar-title">Settings</span>
                 </div>
             </div>
+            <button className="sidebar-box" 
+            onClick={() => {
+              
+                authDispatch({type:"LOGIN", login:false, token: localStorage.removeItem("token")})
+                navigate("/")
+
+
+            }}
+            >Logout</button>
         </div>
     );
 }

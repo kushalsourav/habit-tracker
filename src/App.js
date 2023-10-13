@@ -1,5 +1,7 @@
 
+import Toast from "./Components/Toast/Toast";
 import ContextProvider from "./Contexts/ContextProvider";
+import { useData } from "./Contexts/DataContext/DataContext";
 import Router from "./Router/Router";
 
 function App() {
@@ -7,6 +9,7 @@ function App() {
     <div>
       <ContextProvider>
       <Router />
+     
       </ContextProvider>
 
     </div>
